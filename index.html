@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoteCraft AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>NoteCraft AI</h1>
+      <p>授業資料を貼るだけで、ノート・復習問題・穴埋め・一問一答を自動生成。</p>
+    </section>
+
+    <section class="card">
+      <label for="sourceText">授業資料を貼り付け</label>
+      <textarea id="sourceText" placeholder="ここにレジュメ、スライド本文、授業メモを貼り付けてください"></textarea>
+    </section>
+
+    <section class="card">
+      <h2>作りたいものを選択</h2>
+
+      <label><input type="checkbox" value="わかりやすいノート"> わかりやすいノート</label>
+      <label><input type="checkbox" value="復習プリント"> 復習プリント</label>
+      <label><input type="checkbox" value="穴埋め問題"> 穴埋め問題</label>
+      <label><input type="checkbox" value="一問一答"> 一問一答</label>
+      <label><input type="checkbox" value="各語句説明"> 各語句説明</label>
+      <label><input type="checkbox" value="レポートのテンプレート作成"> レポートのテンプレート作成</label>
+      <label><input type="checkbox" value="レポートを書くにあたって必要な基礎知識を載せたアイデアノート"> レポート用アイデアノート</label>
+    </section>
+
+    <section class="card">
+      <h2>難易度</h2>
+      <select id="level">
+        <option value="大学1年生向け">大学1年生向け</option>
+        <option value="中学生でもわかる">中学生でもわかる</option>
+        <option value="テスト直前向け">テスト直前向け</option>
+        <option value="レポート向け">レポート向け</option>
+      </select>
+    </section>
+
+    <button id="generateBtn">AIで生成する</button>
+
+    <section class="card">
+      <h2>生成結果</h2>
+      <div id="loading" class="hidden">生成中...</div>
+      <pre id="result"></pre>
+      <button id="copyBtn">コピーする</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
